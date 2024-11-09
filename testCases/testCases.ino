@@ -1,6 +1,6 @@
 
 //! Combined Libraries for Camera, LiDAR, IMU, and Rover Movement
-# include <Wire.h>
+#include <Wire.h>
 // #include <SomeCameraLibrary.h>
 // #include <SomeLidarLibrary.h>
 // #include <SomeUltrasonicLibrary.h>
@@ -8,8 +8,8 @@
 // Constants
 const int ANGLE_SEGMENTS = 8;
 const int DISTANCE_THRESHOLD = 200; // distance in cm
-const int ROVER_WIDTH = 50; // Rover width in cm
-const float MAX_SAFE_SLOPE = 20.0; // degrees
+const int ROVER_WIDTH = 50;         // Rover width in cm
+const float MAX_SAFE_SLOPE = 20.0;  // degrees
 const float MIN_STABILITY_SCORE = 0.7;
 const float MAX_OBSTACLE_HEIGHT = 0.3; // meters
 const float WHEEL_SLIP_THRESHOLD = 30; // unsafe level of wheel slip
@@ -64,7 +64,7 @@ void loop() {
     } else if (currentTerrain == "loose_sand") {
         traverseLooseSand();
     }
-    
+
     // Find a clear path for general navigation
     selectedAngle = selectAngle();
     while (pathClear) {
