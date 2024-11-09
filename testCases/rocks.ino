@@ -9,6 +9,8 @@ const int ANGLE_SEGMENTS = 8;       // Number of angle segments
 const int DISTANCE_THRESHOLD = 200; // distance in cm
 const int ROVER_WIDTH = 50;         // Rover width in cm
 
+
+
 int lidarData[ANGLE_SEGMENTS]; // Array for LiDAR data
 int selectedAngle = -1;
 bool pathClear = true; // Flag
