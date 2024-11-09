@@ -1,9 +1,9 @@
 
 //! Combined Libraries for Camera, LiDAR, IMU, and Rover Movement
 # include <Wire.h>
-//#include <SomeCameraLibrary.h>
-//#include <SomeLidarLibrary.h>
-//#include <SomeUltrasonicLibrary.h>
+// #include <SomeCameraLibrary.h>
+// #include <SomeLidarLibrary.h>
+// #include <SomeUltrasonicLibrary.h>
 
 // Constants
 const int ANGLE_SEGMENTS = 8;
@@ -24,7 +24,7 @@ float currentSpeed;
 float wheelSlip;
 String currentTerrain = "unknown";
 
-// Function Prototypes
+// TODO Function Prototypes
 void getImageData();
 void getLidarData();
 void getUltrasonicData();
@@ -43,10 +43,10 @@ void moveBackward(float speed);
 void setup() {
     Serial.begin(9600);
     // Initialize sensors and movement system
-    //Camera.begin();
-    //Lidar.begin();
-    //IMU.begin();
-    //RoverMovement.begin();
+    // Camera.begin();
+    // Lidar.begin();
+    // IMU.begin();
+    // RoverMovement.begin();
 }
 
 void loop() {
@@ -80,11 +80,13 @@ void loop() {
     }
 }
 
+// TODO Function to obtain image data from camera
 void getImageData() {
     Serial.println("Obtaining image data...");
     // Camera data processing placeholder
 }
 
+// TODO Function to obtain terrain data from LiDAR
 void getLidarData() {
     for (int i = 0; i < ANGLE_SEGMENTS; i++) {
         lidarData[i] = getLidarDistance(i); // Placeholder
