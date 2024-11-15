@@ -8,6 +8,9 @@ pyrealsense2 = "*"
 numpy = "*"
 opencv-python = "*"
 tensorflow = "*"
+ultralytics = "*"
+matplotlib = "*"
+pydantic = "*"
 
 [dev-packages]
 
